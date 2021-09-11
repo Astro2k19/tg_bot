@@ -1,0 +1,14 @@
+[Unit]
+Description=Telegram Bot
+After=network.target
+
+[Service]
+User=fantos
+Group=fantos
+
+WorkingDirectory=/home/fantos/tg_bot/
+Environment="PYTHONPATH=/home/fantos/tg_bot/"
+ExecStart=/home/fantos/tg_bot/.venv/bin/python /home/fantos/tg_bot/interpol.py
+
+[Install]
+WantedBy=multi-user.target
